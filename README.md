@@ -1,3 +1,5 @@
+
+
 # MailPal — Spam Detector with Explainable AI
  
 A web app that detects spam messages using machine learning, and
