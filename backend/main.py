@@ -8,8 +8,10 @@ app = FastAPI()
 # Allow your React app (running on a different port) to call this API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
-    allow_origins=["https://spam-detector-red-five.vercel.app/"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://spam-detector-red-five.vercel.app",
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
