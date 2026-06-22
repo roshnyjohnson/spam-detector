@@ -31,3 +31,8 @@ __pycache__/
 .env
 .env.production
 *.pyc
+
+
+.env
+.env.production
+
