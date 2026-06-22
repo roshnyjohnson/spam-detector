@@ -1,0 +1,240 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #2c4dfc 0%,
+    #6ea7ff 35%,
+    #d7e7ff 70%,
+    #eddcff 100%
+  );
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 25px;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 24px;
+}
+
+.shield-logo {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.orbit-ring {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 110px;
+  height: 110px;
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 50%;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.app-title {
+  font-size: 52px;
+  margin: 0;
+  font-weight: 800;
+  background: linear-gradient(90deg, #173b96, #345bdb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  color: #334155;
+  font-size: 15px;
+}
+
+textarea {
+  width: 100%;
+  padding: 18px;
+  margin-top: 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  resize: none;
+  box-sizing: border-box;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+textarea:focus {
+  outline: none;
+}
+
+button {
+  margin-top: 16px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:not(.example-button) {
+  background: linear-gradient(135deg, #3455ff, #5c78ff);
+  color: white;
+}
+
+.examples-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.example-button {
+  background: rgba(255,255,255,0.28);
+  color: #1e3a8a;
+}
+
+.result {
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(24px);
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.confidence-bar-track {
+  width: 260px;
+  height: 14px;
+  background: rgba(255,255,255,0.35);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.confidence-bar-fill {
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.fill-spam {
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+.fill-ham {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+.spam-text {
+  color: #b91c1c;
+  font-size: 24px;
+}
+
+.ham-text {
+  color: #15803d;
+  font-size: 24px;
+}
+
+.confidence-percentage {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.highlighted-message {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.18);
+  line-height: 1.8;
+  max-height: 220px;
+  overflow-y: auto;
+
+}
+
+.highlight-spam {
+  background: rgba(255, 0, 0, 0.15);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.highlight-ham {
+  background: rgba(0, 255, 0, 0.15);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+textarea::placeholder {
+  color: black;
+  opacity: 1; /* important for Firefox */
+}
+
+.error-message {
+  margin-top: 12px;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+/* media pipe */
+
+@media (max-width: 640px) {
+  .App {
+    padding: 16px;
+  }
+ 
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+ 
+  .app-title {
+    font-size: 36px;
+  }
+ 
+  .result-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+ 
+  .confidence-bar-track {
+    width: 100%;
+  }
+ 
+  .examples-row {
+    flex-direction: column;
+  }
+ 
+  .example-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
