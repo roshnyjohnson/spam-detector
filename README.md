@@ -51,12 +51,12 @@ explains its decision by highlighting which words influenced the result.
 [link once deployed]
  
 ## Screenshots
-![alt text](class_distribution.png)
+![alt text](notebook/class_distribution.png)
 
 
-![alt text](confusion_matrix.png)
+![alt text](notebook/confusion_matrix.png)
 
-![alt text](top_spam_words.png)
+![alt text](notebook/top_spam_words.png)
 
 
 ## Tech Stack
