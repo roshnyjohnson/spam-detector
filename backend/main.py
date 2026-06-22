@@ -9,7 +9,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],
-    allow_origins=["https://fake-news-detector.vercel.app"],  # add your real Vercel URL here once you have it
+    allow_origins=["https://spam-detector-red-five.vercel.app/"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
