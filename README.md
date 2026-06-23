@@ -6,7 +6,9 @@ A web app that detects spam messages using machine learning, and
 explains its decision by highlighting which words influenced the result.
  
 ## Live Demo
-[link once deployed]
+Frontend:https://spam-detector-red-five.vercel.app/
+
+Backend:https://spam-detector-u6hc.onrender.com/
  
 ## Screenshots
 ![alt text](notebook/class_distribution.png)
